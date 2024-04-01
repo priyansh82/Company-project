@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Timesheet</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9a9696;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: blueviolet;
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Candidate Timesheet</h1>
+    <form action="/candidate" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="a1" id="name" placeholder="Name">
+        <label for="timesheet">Timesheet:</label>
+        <input type="text" name="a2" id="timesheet" placeholder="Timesheet">
+        <label for="work">Work:</label>
+        <input type="text" name="a3" id="work" placeholder="Work">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- manager.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Manager</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Timesheet</th>
+                <th>Work</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+            <% employees.forEach(function(employee) { %>
+                <tr>
+                    <td><%= employee.Ename %></td>
+                    <td><%= employee.Timesheet %></td>
+                    <td><%= employee.work %></td>
+                    
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Button to go to another page -->
+    <form action="/rating" method="get"> <!-- Change "/another-page" to your desired route -->
+        <button type="submit">rate employee</button>
+    </form>
+</body>
+</html>
